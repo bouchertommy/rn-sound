@@ -264,7 +264,7 @@ RCT_EXPORT_METHOD(prepare:(NSString*)fileName withKey:(nonnull NSNumber*)key
 }
 RCT_EXPORT_METHOD(play:(nonnull NSNumber*)key withCallback:(RCTResponseSenderBlock)callback) {
   AVAudioPlayer* player = [self playerForKey:key];
-  NSDictionary* trackInfo = [self trackInfoForKey:key];
+  // NSDictionary* trackInfo = [self trackInfoForKey:key];
 
   if (player) {
     // call back for play successful
@@ -273,7 +273,7 @@ RCT_EXPORT_METHOD(play:(nonnull NSNumber*)key withCallback:(RCTResponseSenderBlo
     [player play];
 
     //set track info
-    [self setTrackInformationForKey:key];
+    // [self setTrackInformationForKey:key];
   }
 }
 
